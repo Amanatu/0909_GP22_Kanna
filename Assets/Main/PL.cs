@@ -14,6 +14,8 @@ public class PL : MonoBehaviour
 
     [SerializeField]
     public static int score = 0;
+    [SerializeField]
+    public static int life_point = 4;
 
     void Start()
     {

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
+  - bad_item
+  - plus_item
   layers:
   - Default
   - TransparentFX

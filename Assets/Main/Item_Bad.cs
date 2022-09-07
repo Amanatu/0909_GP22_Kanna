@@ -19,11 +19,12 @@ public class Item_Bad : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void OnTriggerStay2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
             Destroy(gameObject);
+            PL.life_point -= 1;
         }
     }
 }

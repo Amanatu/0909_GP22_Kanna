@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Start_UI : MonoBehaviour
+public class GameOver_UI : MonoBehaviour
 {
     float time = 0;
     [SerializeField]
-    Text title_text;
+    Text space_text;
+    [SerializeField]
+    Text enter_text;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,19 +22,25 @@ public class Start_UI : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if (time >= 1.5f)
+        if (time >= 1.2f)
         {
             time = 0;
-            title_text.enabled = true;
+            space_text.enabled = true;
+            enter_text.enabled = true;
         }
         else if (time >= 1)
         {
-            title_text.enabled = false;
+            space_text.enabled = false;
+            enter_text.enabled = false;
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
             SceneManager.LoadScene("Game_Main");
+        }
+        if (Input.GetKeyUp(KeyCode.Return))
+        {
+            SceneManager.LoadScene("Title");
         }
 
     }
