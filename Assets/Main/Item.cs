@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    Rigidbody2D item_rb;
 
     // Start is called before the first frame update
     void Start()
     {
     }
 
-    // Update is called once per frame
+    // ê∂ê¨Ç∆çÌèú
     void Update()
     {
         Vector2 pos = transform.position;
@@ -24,7 +23,6 @@ public class Item : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            PL.score += 1;
             Destroy(gameObject);
         }
     }

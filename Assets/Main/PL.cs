@@ -17,11 +17,20 @@ public class PL : MonoBehaviour
     [SerializeField]
     public static int life_point = 4;
 
+    public AudioClip se_bad;
+    public AudioClip se_get;
+
+    AudioSource audioSource;
+
+    GameObject[] tagobjs;
     void Start()
     {
         //rbの取得
         rb_pl = GetComponent<Rigidbody2D>();
         score = 0;
+        audioSource = GetComponent<AudioSource>();
+
+        tagobjs = GameObject.FindGameObjectsWithTag("HP");
     }
 
     void Update()
@@ -57,6 +66,24 @@ public class PL : MonoBehaviour
         if (collision.tag == "ground")
         {
             is_ground = false;
+        }
+    }
+
+    //マイナスアイテムにあったった
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "bad_item")
+        {
+            audioSource.PlayOneShot(se_bad);
+            life_point -= 1;
+            var hog = tagobjs[life_point];
+            Destroy(hog);
+        }
+        //アイテムにあたった
+        if (collision.tag == "plus_item")
+        {
+            audioSource.PlayOneShot(se_get);
+            PL.score += 1;
         }
     }
 }

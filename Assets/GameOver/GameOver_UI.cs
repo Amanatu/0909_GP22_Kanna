@@ -9,8 +9,6 @@ public class GameOver_UI : MonoBehaviour
     float time = 0;
     [SerializeField]
     Text space_text;
-    [SerializeField]
-    Text enter_text;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,12 +24,10 @@ public class GameOver_UI : MonoBehaviour
         {
             time = 0;
             space_text.enabled = true;
-            enter_text.enabled = true;
         }
         else if (time >= 1)
         {
             space_text.enabled = false;
-            enter_text.enabled = false;
         }
 
         if (Input.GetKeyUp(KeyCode.Space))

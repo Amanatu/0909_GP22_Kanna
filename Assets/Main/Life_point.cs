@@ -6,7 +6,7 @@ public class Life_point : MonoBehaviour
 {
     [SerializeField]
     GameObject life_ob;
-    // ライフポイントを表すオブジェクトの生成と削除
+    // ライフポイントを表すオブジェクトの生成
     void Start()
     {
         for (int i = 0; i < PL.life_point; i++)
@@ -15,8 +15,7 @@ public class Life_point : MonoBehaviour
             life_obj.name = "HP" + i;
         }
     }
-    //出来ればPLのLIFEと連動させたい
-    // Update is called once per frame
+
     void Update()
     {
     }

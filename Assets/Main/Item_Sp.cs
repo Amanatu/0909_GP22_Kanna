@@ -28,7 +28,7 @@ public class Item_Sp : MonoBehaviour
         if(item_sp_timer <= 0)
         {
             var nam = Random.Range(0, 1000);
-            if (nam <= 1000 && nam >= 201) //仮置き　数字いじってelse ifしな
+            if (nam <= 1000 && nam >= 201) 
             {
                 //ノーマルアイテムの生成
                 GameObject normal = Instantiate(items[0]);
