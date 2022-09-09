@@ -16,7 +16,7 @@ public class wall_move : MonoBehaviour
         Vector2 pos = transform.position;
         if (pos.y >= -0.26f)
         {
-            transform.Translate(0, -0.02f, 0);
+            transform.Translate(0, -0.04f, 0);
         }
     }
 }

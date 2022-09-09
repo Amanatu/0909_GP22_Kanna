@@ -16,11 +16,11 @@ public class ground_move : MonoBehaviour
         Vector2 pos = transform.position;
         if (pos.x >= 0.06)
         {
-            transform.Translate(-0.02f, 0, 0);
+            transform.Translate(-0.04f, 0, 0);
         }
         else if (pos.x <= 0.05)
         {
-            transform.Translate(0.02f, 0, 0);
+            transform.Translate(0.04f, 0, 0);
         }
     }
 }

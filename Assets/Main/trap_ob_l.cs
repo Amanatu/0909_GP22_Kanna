@@ -13,7 +13,7 @@ public class trap_ob_l : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0.015f, 0, 0);
+        transform.Translate(0.045f, 0, 0);
         Vector2 pos = transform.position;
         if (pos.x >= 10)
         {
