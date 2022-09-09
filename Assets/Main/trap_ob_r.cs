@@ -10,7 +10,7 @@ public class trap_ob_r : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // ¶¬AˆÚ“®‚Æíœ
     void Update()
     {
         transform.Translate(-0.045f, 0, 0);

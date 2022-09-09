@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PL : MonoBehaviour
 {
+    //基本動作
     [SerializeField]
     public float speed = 10; //移動速度
     [SerializeField]
@@ -12,16 +13,19 @@ public class PL : MonoBehaviour
     Rigidbody2D rb_pl;
     private bool is_ground;　//地面判定
 
+    //スコアとライフ
     [SerializeField]
     public static int score = 0;
     [SerializeField]
     public static int life_point = 4;
 
+    //音楽
     public AudioClip se_bad;
     public AudioClip se_get;
 
     AudioSource audioSource;
 
+    //ライフオブジェクト
     GameObject[] tagobjs;
     void Start()
     {
